@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback)=>{
         }else if(body.error){
             callback('Unable to get the forecast, check the location cordinates and try again.')
         }else{
-            callback(undefined,body.current.weather_descriptions[0]+'. Current temparateure for given cordinates is '+body.current.temperature+' degrees with '+body.current.feelslike+'% probability of rain.')
+            callback(undefined,body.current.weather_descriptions[0]+'. Current temparateure for given cordinates is '+body.current.temperature+' degrees with '+body.current.feelslike+'% probability of rain. Also the humidity is '+body.current.humidity+ ' and the visibility have came to '+body.current.visibility+'.')
         }
     })
 }
