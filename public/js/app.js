@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e)=>{
         
 //calling the fetch function to get the weather details by passing location as dynamic value to the url
 
-fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+fetch('/weather?address='+location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             messageOne.textContent = data.error
